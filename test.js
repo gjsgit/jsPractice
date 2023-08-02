@@ -38,7 +38,7 @@ if(isNaN(age)){
 	console.log("it is the right way");
 };
 */
-
+/*
 const age = parseInt(prompt("how old are you?"));
 
 if(isNaN(age) || age < 0){
@@ -52,3 +52,16 @@ if(isNaN(age) || age < 0){
 } else if(age > 150){
 	console.log("you are a liar")
 };
+*/
+
+const toggle = document.querySelector(".toggle");
+
+function blackBlueSwith(){
+	if(toggle.style.color === "black"){
+		toggle.style.color = "blue";
+	} else{
+		toggle.style.color = "black";
+	};
+};
+
+toggle.addEventListener("click",blackBlueSwith );
