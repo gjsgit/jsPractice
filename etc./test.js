@@ -57,7 +57,7 @@ if(isNaN(age) || age < 0){
 const toggle = document.querySelector(".toggle");
 
 function blackBlueSwith(){
-	if(toggle.style.color === "black"){
+	if(toggle.style.color == "black"){
 		toggle.style.color = "blue";
 	} else{
 		toggle.style.color = "black";
