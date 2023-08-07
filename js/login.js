@@ -26,7 +26,7 @@ const savedUserName = localStorage.getItem(USERNAME_KEY);
 
 if(localStorage.getItem(USERNAME_KEY) === null){
 	loginForm.classList.remove(HIDDEN_CLASS);
-	getUserName(event);
+	getUserName();
 }else {
 	greetingSet(savedUserName);
 }
