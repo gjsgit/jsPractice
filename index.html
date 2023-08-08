@@ -4,15 +4,24 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/login.css">
-		<title>Login</title>
+		<title>^-^</title>
 	</head>
 	
 	<body>
 		<form id="loginForm" class="hidden">
 			<input required maxlength=15 type="text" placeholder="What`s your name?"/>
 		</form>
+		
 		<h1 id="greeting" class="hidden"></h1>
-		<h2 id="clock">00:00:00</h2>
+		<h2 id="clock"></h2>
+		
+		<form id="todoForm">
+			<input type="text" placeholder="write todo list" required>
+		</form>
+		<ul id="todoList">
+			
+		</ul>
+		
 		<div id="quotes">
 			<span></span>
 			<span></span>
@@ -22,5 +31,6 @@
 		<script src="js/clock.js"></script>
 		<script src="js/quotes.js"></script>
 		<script src="js/background.js"></script>
+		<script src="js/todo.js"></script>
 	</body>
 </html>

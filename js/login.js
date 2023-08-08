@@ -20,13 +20,11 @@ function getUserName(event){
 	localStorage.setItem(USERNAME_KEY, userName);
 }
 
-loginForm.addEventListener("submit", getUserName);
-
 const savedUserName = localStorage.getItem(USERNAME_KEY);
 
 if(localStorage.getItem(USERNAME_KEY) === null){
 	loginForm.classList.remove(HIDDEN_CLASS);
-	getUserName();
+	loginForm.addEventListener("submit", getUserName);
 }else {
 	greetingSet(savedUserName);
 }
