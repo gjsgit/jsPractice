@@ -29,18 +29,25 @@ const vocaN2 = [
 	{japanese:"特売 (とくばい)",
 	korean:"특매"}
 ];
-const vocaN2Jp = vocaN2.japanese;
-const covaN2Kr = vocaN2.korean;
 const displayVoca = document.querySelector("#voca");
 const displayVocaKor = document.querySelector("#vocaKor");
 const vocaButton = document.querySelector("#vocaButton");
 const plusKor = document.querySelector("#plusKor");
 const plusJp = document.querySelector("#plusJp");
+const plusButton = document.querySelector("#plusButton");
+const subtractButton = document.querySelector("#subtractButton");
 
-console.log(vocaN2Jp);
+function subtract(){
+	
+}
 
-function plus(){
-	plusJp ="" ;
+function plus(event){
+	const newData = {};
+	event.preventDefault();
+	newData.japanese = plusJp.value;
+	newData.korean = plusKor.value;
+	
+	vocaN2.push(newData);
 }
 
 function giveVoca(){
@@ -52,3 +59,5 @@ function giveVoca(){
 };
 
 vocaButton.addEventListener("click", giveVoca);
+plusButton.addEventListener("click", plus);
+subtractButton.addEventListener("click", subtract);
