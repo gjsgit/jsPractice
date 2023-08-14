@@ -1,4 +1,4 @@
-const vocaN2 = [
+let vocaN2 = [
 	{japanese:"瞳 (ひとみ)",
 	korean:"눈동자"},
 	
@@ -37,19 +37,39 @@ const plusJp = document.querySelector("#plusJp");
 const plusButton = document.querySelector("#plusButton");
 const subtractButton = document.querySelector("#subtractButton");
 
+//array안에 있는 객체 삭제
 function subtract(){
+	const presentData = {
+	japanese:displayVoca.innerText,
+	korean:displayVocaKor.innerText
+	};
 	
+	for (i=0; i<vocaN2.length; i++){
+		if(JSON.stringify(presentData) === JSON.stringify(vocaN2[i])){
+			vocaN2.splice(i,1);
+		}
+	};
+	//객체 잘 없어졌는지 확인
+	console.log(presentData);
+	console.log(vocaN2);
 }
 
+//array안에 객체 추가
 function plus(event){
 	const newData = {};
 	event.preventDefault();
-	newData.japanese = plusJp.value;
-	newData.korean = plusKor.value;
-	
-	vocaN2.push(newData);
+	if(plusJp.value === "" || plusKor.value === ""){
+		alert("please write!")
+	}else{
+		newData.japanese = plusJp.value;
+		newData.korean = plusKor.value;
+		plusKor.value="";
+		plusJp.value="";
+		vocaN2.push(newData);
+	}
 }
 
+//랜덤하게 단어 화면에 띄우기
 function giveVoca(){
 	const randomVocaNumber = Math.floor(Math.random()*vocaN2.length);
 	const newVoca = vocaN2[randomVocaNumber];

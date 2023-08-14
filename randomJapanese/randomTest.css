@@ -1,0 +1,20 @@
+.all {
+	display:flex;
+	flex-direction:column;
+}
+
+.voca {
+	
+}
+
+.plusForm{
+	
+}
+
+.subtract{
+	
+}
+
+body{
+	background-image:url('background.jpg');
+}
