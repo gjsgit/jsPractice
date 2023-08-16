@@ -1,20 +1,31 @@
 .all {
 	display:flex;
 	flex-direction:column;
+	background-color:#389738;
+	padding:50px;
+	padding-top:10px;
+	border:20px solid #5c2525;
+	border-radius:5%;
 }
 
-.voca {
-	
+.voca{
+	color:white;
 }
 
 .plusForm{
-	
+	padding-top:10px;
+}
+
+.plusForm button{
+	margin-top:10px;
 }
 
 .subtract{
-	
+	padding-top:10px;
 }
 
 body{
-
+	margin:0 auto;
+	width:500px;
+	padding-top:225px;
 }
