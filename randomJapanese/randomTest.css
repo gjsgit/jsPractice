@@ -6,6 +6,7 @@
 	padding-top:10px;
 	border:20px solid #5c2525;
 	border-radius:5%;
+	width:400px;
 }
 
 .voca{
@@ -24,8 +25,27 @@
 	padding-top:10px;
 }
 
+.spriteTeacherImage {
+	display:inline-block;
+	background: url('teacher.jpg') no-repeat -33px -19px;
+	width: 237px;
+	height: 414px;
+}
+
+.teacherImage{
+	position:absolute;
+	z-index:999;
+	top:50px; left:400px;
+}
+
 body{
-	margin:0 auto;
-	width:500px;
-	padding-top:225px;
+	position:relative;
+	margin-top:25vh;
+	margin-left:35vw;
+}
+
+.timer{
+	position:absolute;
+	top:-100px; left:200px;
+	font-size:xx-large;
 }
